@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CursosComponent } from './cursos.component';
 import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
+import { CursosService } from './cursos.service';
 
 @NgModule({
   imports: [
@@ -11,6 +12,7 @@ import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
     CursosComponent, 
     CursoDetalheComponent //component privated - nao exportado
   ],
-  exports:[CursosComponent]
+  exports:[CursosComponent],
+  providers:[CursosService]
 })
 export class CursosModule { }
