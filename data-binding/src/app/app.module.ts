@@ -7,6 +7,7 @@ import { MeuInputOutputModule } from './meu-input-output/meu-input-output.module
 import { AppComponent } from './app.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { InputPropertyComponent } from './input-property/input-property.component';
+import { OutputPropertyComponent } from './output-property/output-property.component';
 
 
 
@@ -14,7 +15,8 @@ import { InputPropertyComponent } from './input-property/input-property.componen
   declarations: [
     AppComponent,
     DataBindingComponent,
-    InputPropertyComponent
+    InputPropertyComponent,
+    OutputPropertyComponent
   ],
   imports: [
     BrowserModule,

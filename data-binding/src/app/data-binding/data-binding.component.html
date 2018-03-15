@@ -78,17 +78,10 @@
       <h3>Input/Output Properties</h3>
   
       <app-curso [nome]="nomeDoCurso"></app-curso>
+
+      <contador [valor]="valorInicial" (mudouValor)="onMudouValor($event)"></contador>
+
     <article>
 <section>
 
 <parent-example></parent-example>
-
-<div class="parent">
-  <h1>Parent</h1>
-  <p>Value enteres in child component: {{childValue}}</p>
-  <input type="text" #parentInput (keyup)="0">
-  <br>
-  <div class="child">
-    <child [parentValue]="parentInput.value" (childChanged)="childValue = $event"></child>
-  </div>
-</div>
