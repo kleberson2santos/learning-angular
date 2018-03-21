@@ -5,6 +5,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CursosComponent } from './cursos/cursos.component';
 
+import { CursosService } from './cursos/cursos.service';
+
 
 @NgModule({
   declarations: [
@@ -12,9 +14,9 @@ import { CursosComponent } from './cursos/cursos.component';
     CursosComponent
   ],
   imports: [
-    BrowserModule
+  BrowserModule
   ],
-  providers: [],
+  providers: [CursosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
