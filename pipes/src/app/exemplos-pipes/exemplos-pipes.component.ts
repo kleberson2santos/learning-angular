@@ -27,6 +27,7 @@ export class ExemplosPipesComponent implements OnInit {
     console.log(this.livros);
   }
 
+  //funcao de callback
   obterCursos(){
     if(this.livros.length === 0 || this.filtro === undefined || this.filtro.trim() === ''){
       return this.livros;
@@ -34,8 +35,10 @@ export class ExemplosPipesComponent implements OnInit {
 
     return this.livros.filter(
       v => {
-        if(v.toLocaleLowerCase().indexOf(this.filtro.toLowerCase()) >= 0){return true;}
-        return false;
+              if(v.toLocaleLowerCase().indexOf(this.filtro.toLowerCase()) >= 0){               
+                return true;
+              }
+              return false;
       });
   }
 
@@ -43,6 +46,7 @@ export class ExemplosPipesComponent implements OnInit {
     setTimeout(() => resolve('Valor assíncrono'), 2000)
   });
 
+  //sistemas reativos
   valorAsync2 = Observable.interval(2000)
                           .map(valor => 'Valor assíncrono 2');
 
