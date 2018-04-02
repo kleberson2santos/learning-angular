@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 
-import { routing } from './app.routing';
+import { AppRoutingModule } from './app.routing.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -24,7 +24,8 @@ import { CursoNaoEncontradoComponent } from './curso-nao-encontrado/curso-nao-en
   ],
   imports: [
     BrowserModule,
-    routing
+    AppRoutingModule
+    //routing
   ],
   providers: [CursosService],
   bootstrap: [AppComponent]
