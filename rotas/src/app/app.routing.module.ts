@@ -1,3 +1,4 @@
+import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada/pagina-nao-encontrada.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
@@ -29,9 +30,10 @@ const appRoutes: Routes = [
     //{ path: 'curso/:id', component: CursoDetalheComponent },
     { path: 'login', component: LoginComponent },
     //{ path: 'naoEncontrado', component: CursoNaoEncontradoComponent},
-    { path: '', component: HomeComponent,
-        canActivate: [AuthGuard] 
-    }
+    { path: 'home', component: HomeComponent,
+        canActivate: [AuthGuard] },
+    { path: '', redirectTo: '/home', pathMatch: 'full'},
+    { path: '**', component: PaginaNaoEncontradaComponent}
 ];
 
 
