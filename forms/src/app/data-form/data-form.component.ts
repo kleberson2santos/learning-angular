@@ -33,7 +33,16 @@ export class DataFormComponent implements OnInit {
     console.log(this.formulario.value);
     this.http.post('http://httpbin.org/post',JSON.stringify(this.formulario.value))
     .map(res => res)
-    .subscribe(dados => console.log(dados));
+    .subscribe(dados => {
+      console.log(dados);
+      //resets form
+      //this.formulario.reset();
+      this.resetar();
+    },(error: any) => alert('erro'));
+  }
+
+  resetar(){
+    this.formulario.reset();
   }
 
 }
